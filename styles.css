@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Animations */
+.fade-in { animation: fadeIn 0.3s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Card Styling */
+.tool-card {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
+
+/* --- DRAG & DROP --- */
+.sortable-ghost {
+    opacity: 0.4;
+    background: #e0e7ff; /* Indigo-100 */
+    border: 2px dashed #6366f1;
+}
+.sortable-drag {
+    cursor: grabbing;
+    opacity: 1;
+    background: white;
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+.drag-handle {
+    cursor: grab;
+    touch-action: none;
+}
+.drag-handle:active { cursor: grabbing; }
+
+/* --- SELECTION VISIBILITY (High Contrast) --- */
+.thumb-area {
+    transition: all 0.15s ease;
+    border: 3px solid transparent;
+}
+
+/* The Selected State */
+.thumb-area.selected {
+    border-color: #6366f1; /* Brand Indigo */
+    background-color: #e0e7ff; /* Light Indigo Background */
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2); /* Outer Glow */
+    transform: scale(0.95);
+}
+
+/* Add a visual checkmark when selected */
+.thumb-area.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #6366f1;
+    font-weight: bold;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.9);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Spinner */
+.loader {
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
