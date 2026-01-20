@@ -1,7 +1,10 @@
 {
-  "name": "pdf",
-  "main": "index.html",
+  "name": "pdf-tools",
   "compatibility_date": "2024-09-23",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
   "routes": [
     { "pattern": "111iridescence.org/pdf*", "zone_name": "111iridescence.org" }
   ]
