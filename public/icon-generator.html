@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111iridescence | App Icon Generator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        iri: '#6366f1', 
+                        iriDark: '#4338ca', 
+                        accent: '#f43f5e',
+                        selected: '#e0e7ff' 
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                } 
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .icon-preview {
+            background: white;
+            border-radius: 22.37%;
+            background: linear-gradient(135deg, #6366f1 0%, #f43f5e 100%);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .icon-number {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: -0.02em;
+        }
+        
+        .download-icon {
+            border-radius: 22.37%;
+            background: linear-gradient(135deg, #6366f1 0%, #f43f5e 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans">
+    
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-iri to-accent rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">111</div>
+                <div>
+                    <h1 class="font-bold text-xl tracking-tight">111<span class="text-iri">iridescence</span></h1>
+                    <p class="text-sm text-slate-500">App Icon Generator</p>
+                </div>
+            </div>
+            <a href="pdf/index.html" class="text-slate-600 hover:text-slate-900 font-medium">← Back to PDF Tools</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto p-6 lg:p-10">
+        
+        <!-- Icon Preview Section -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-12">
+            
+            <!-- Live Preview -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-8">
+                <h2 class="text-2xl font-bold mb-6 text-slate-900">Live Preview</h2>
+                
+                <div class="bg-slate-100 p-8 rounded-xl flex items-center justify-center">
+                    <div id="icon-preview" class="icon-preview w-32 h-32 flex items-center justify-center">
+                        <span class="icon-number text-4xl">111</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 grid grid-cols-4 gap-4">
+                    <!-- Different sizes preview -->
+                    <div class="text-center">
+                        <div class="download-icon w-16 h-16 flex items-center justify-center mx-auto mb-2">
+                            <span class="icon-number text-lg">111</span>
+                        </div>
+                        <p class="text-xs text-slate-500">64x64</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="download-icon w-20 h-20 flex items-center justify-center mx-auto mb-2">
+                            <span class="icon-number text-xl">111</span>
+                        </div>
+                        <p class="text-xs text-slate-500">80x80</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="download-icon w-24 h-24 flex items-center justify-center mx-auto mb-2">
+                            <span class="icon-number text-2xl">111</span>
+                        </div>
+                        <p class="text-xs text-slate-500">96x96</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="download-icon w-32 h-32 flex items-center justify-center mx-auto mb-2">
+                            <span class="icon-number text-4xl">111</span>
+                        </div>
+                        <p class="text-xs text-slate-500">128x128</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-8">
+                <h2 class="text-2xl font-bold mb-6 text-slate-900">Icon Settings</h2>
+                
+                <!-- Current Specifications -->
+                <div class="bg-slate-50 p-6 rounded-xl mb-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">Current Design</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-slate-600">Style:</span>
+                            <span class="text-slate-900 font-medium">iOS App Icon</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-600">Shape:</span>
+                            <span class="text-slate-900 font-medium">Rounded Square (22.37%)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-600">Gradient:</span>
+                            <span class="text-slate-900 font-medium">Indigo → Rose (135°)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-600">Colors:</span>
+                            <div class="flex gap-2">
+                                <div class="w-4 h-4 rounded" style="background: #6366f1;"></div>
+                                <div class="w-4 h-4 rounded" style="background: #f43f5e;"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-600">Typography:</span>
+                            <span class="text-slate-900 font-medium">Inter 900, White</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Color Customization -->
+                <div class="space-y-4 mb-8">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Start Color (Top-Left)</label>
+                        <div class="flex gap-3 items-center">
+                            <input type="color" id="startColor" value="#6366f1" class="w-12 h-10 border border-slate-300 rounded-lg cursor-pointer">
+                            <input type="text" id="startColorText" value="#6366f1" class="flex-1 px-3 py-2 border border-slate-300 rounded-lg text-sm font-mono">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">End Color (Bottom-Right)</label>
+                        <div class="flex gap-3 items-center">
+                            <input type="color" id="endColor" value="#f43f5e" class="w-12 h-10 border border-slate-300 rounded-lg cursor-pointer">
+                            <input type="text" id="endColorText" value="#f43f5e" class="flex-1 px-3 py-2 border border-slate-300 rounded-lg text-sm font-mono">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Gradient Angle</label>
+                        <input type="range" id="gradientAngle" min="0" max="360" value="135" class="w-full">
+                        <div class="text-sm text-slate-600 mt-1">
+                            <span id="angleValue">135</span>°
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download Section -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8">
+            <h2 class="text-2xl font-bold mb-6 text-slate-900">Download High-Resolution Icons</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <!-- iOS Sizes -->
+                <button onclick="downloadIcon(180, 'iOS-60@3x')" class="bg-slate-50 hover:bg-slate-100 p-4 rounded-xl border border-slate-200 transition-colors text-left">
+                    <div class="text-lg font-bold text-slate-900">180×180</div>
+                    <div class="text-sm text-slate-600">iOS App Store</div>
+                </button>
+                
+                <button onclick="downloadIcon(1024, 'iOS-AppStore')" class="bg-slate-50 hover:bg-slate-100 p-4 rounded-xl border border-slate-200 transition-colors text-left">
+                    <div class="text-lg font-bold text-slate-900">1024×1024</div>
+                    <div class="text-sm text-slate-600">iOS Marketing</div>
+                </button>
+                
+                <!-- Android Sizes -->
+                <button onclick="downloadIcon(512, 'Android-512')" class="bg-slate-50 hover:bg-slate-100 p-4 rounded-xl border border-slate-200 transition-colors text-left">
+                    <div class="text-lg font-bold text-slate-900">512×512</div>
+                    <div class="text-sm text-slate-600">Android Play Store</div>
+                </button>
+                
+                <!-- Ultra High-Res -->
+                <button onclick="downloadIcon(8192, '8K-Ultra')" class="bg-iri hover:bg-iriDark text-white p-4 rounded-xl transition-colors text-left">
+                    <div class="text-lg font-bold">8192×8192</div>
+                    <div class="text-sm opacity-90">8K Resolution</div>
+                </button>
+            </div>
+            
+            <!-- Custom Size -->
+            <div class="flex gap-4 items-center justify-between p-4 bg-slate-50 rounded-xl">
+                <div class="flex gap-3 items-center">
+                    <label class="text-sm font-semibold text-slate-700">Custom Size:</label>
+                    <input type="number" id="customSize" value="1024" min="64" max="8192" class="w-24 px-3 py-2 border border-slate-300 rounded-lg text-sm">
+                    <span class="text-sm text-slate-600">×</span>
+                    <span class="text-sm text-slate-600" id="customSizeDisplay">1024</span>
+                </div>
+                <button onclick="downloadCustomIcon()" class="bg-accent hover:bg-rose-600 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-colors">
+                    Download Custom
+                </button>
+            </div>
+            
+            <!-- SVG Download -->
+            <div class="mt-4 pt-4 border-t border-slate-200">
+                <button onclick="downloadSVG()" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Download Vector SVG
+                </button>
+                <p class="text-sm text-slate-600 mt-2">Perfect for print and infinite scalability</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        // Color picker synchronization
+        const startColorPicker = document.getElementById('startColor');
+        const startColorText = document.getElementById('startColorText');
+        const endColorPicker = document.getElementById('endColor');
+        const endColorText = document.getElementById('endColorText');
+        const gradientAngle = document.getElementById('gradientAngle');
+        const angleValue = document.getElementById('angleValue');
+        const iconPreview = document.getElementById('icon-preview');
+        const customSizeInput = document.getElementById('customSize');
+        const customSizeDisplay = document.getElementById('customSizeDisplay');
+
+        // Sync color inputs
+        startColorPicker.addEventListener('input', () => {
+            startColorText.value = startColorPicker.value;
+            updatePreview();
+        });
+        
+        startColorText.addEventListener('input', () => {
+            if (isValidHex(startColorText.value)) {
+                startColorPicker.value = startColorText.value;
+                updatePreview();
+            }
+        });
+        
+        endColorPicker.addEventListener('input', () => {
+            endColorText.value = endColorPicker.value;
+            updatePreview();
+        });
+        
+        endColorText.addEventListener('input', () => {
+            if (isValidHex(endColorText.value)) {
+                endColorPicker.value = endColorText.value;
+                updatePreview();
+            }
+        });
+        
+        gradientAngle.addEventListener('input', () => {
+            angleValue.textContent = gradientAngle.value;
+            updatePreview();
+        });
+        
+        customSizeInput.addEventListener('input', () => {
+            customSizeDisplay.textContent = customSizeInput.value;
+        });
+
+        function isValidHex(hex) {
+            return /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex);
+        }
+
+        function updatePreview() {
+            const startColor = startColorText.value;
+            const endColor = endColorText.value;
+            const angle = gradientAngle.value;
+            
+            iconPreview.style.background = `linear-gradient(${angle}deg, ${startColor} 0%, ${endColor} 100%)`;
+            
+            // Update all preview icons
+            document.querySelectorAll('.download-icon').forEach(icon => {
+                icon.style.background = `linear-gradient(${angle}deg, ${startColor} 0%, ${endColor} 100%)`;
+            });
+        }
+
+        function createCanvas(size) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Enable high-quality rendering
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, startColorText.value);
+            gradient.addColorStop(1, endColorText.value);
+            
+            // Draw rounded rectangle (iOS style)
+            const cornerRadius = size * 0.2237; // iOS corner radius ratio
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, cornerRadius);
+            ctx.fill();
+            
+            // Draw "111" text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = `900 ${size * 0.35}px Inter, system-ui, -apple-system, sans-serif`;
+            ctx.letterSpacing = `${-size * 0.01}px`;
+            
+            // Add text shadow effect
+            ctx.shadowColor = 'rgba(0,0,0,0.1)';
+            ctx.shadowBlur = size * 0.01;
+            ctx.shadowOffsetY = size * 0.01;
+            
+            ctx.fillText('111', size / 2, size / 2);
+            
+            return canvas;
+        }
+
+        function downloadIcon(size, filename) {
+            const canvas = createCanvas(size);
+            const link = document.createElement('a');
+            link.download = `111iridescence-icon-${filename}.png`;
+            link.href = canvas.toDataURL('image/png', 1.0);
+            link.click();
+        }
+
+        function downloadCustomIcon() {
+            const size = parseInt(customSizeInput.value);
+            downloadIcon(size, `${size}x${size}`);
+        }
+
+        function downloadSVG() {
+            const size = 1024;
+            const startColor = startColorText.value;
+            const endColor = endColorText.value;
+            const angle = gradientAngle.value;
+            
+            const svg = `
+<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(${angle})">
+      <stop offset="0%" stop-color="${startColor}"/>
+      <stop offset="100%" stop-color="${endColor}"/>
+    </linearGradient>
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="${size * 0.005}" stdDeviation="${size * 0.003}" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+  
+  <rect width="${size}" height="${size}" rx="${size * 0.2237}" fill="url(#iconGradient)"/>
+  
+  <text x="${size / 2}" y="${size / 2}" 
+        font-family="Inter, system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="${size * 0.35}" 
+        fill="white" 
+        text-anchor="middle" 
+        dominant-baseline="central"
+        letter-spacing="${-size * 0.01}"
+        filter="url(#textShadow)">111</text>
+</svg>`.trim();
+
+            const blob = new Blob([svg], { type: 'image/svg+xml' });
+            const link = document.createElement('a');
+            link.download = '111iridescence-icon-vector.svg';
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+
+        // Add roundRect polyfill for older browsers
+        if (!CanvasRenderingContext2D.prototype.roundRect) {
+            CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+                if (w < 2 * r) r = w / 2;
+                if (h < 2 * r) r = h / 2;
+                this.beginPath();
+                this.moveTo(x + r, y);
+                this.arcTo(x + w, y, x + w, y + h, r);
+                this.arcTo(x + w, y + h, x, y + h, r);
+                this.arcTo(x, y + h, x, y, r);
+                this.arcTo(x, y, x + w, y, r);
+                this.closePath();
+                return this;
+            }
+        }
+    </script>
+</body>
+</html>
